@@ -73,4 +73,29 @@ If bug:
 # DevOps Lifecycle :
 
 <img src="https://devopedia.org/images/article/54/7602.1513404277.png" alt="">
+<br>
 
+<b>1.Plan -></b> The Plan phase is the first stage of the DevOps lifecycle where teams define what to build, why to build it, and how to build it.
+<br> 
+It mainly focus on Understanding requirements , Setting goals and desing the work flow.
+<br>
+
+<b>2.Code -> </b> The Code phase is where developers write, manage, and store the application code using version control systems.
+<br>
+
+<b>3. Build -></b> The Build phase Convert source code into executable application.
+<br>
+
+<b>4.Test -></b> The Test phase is where the application is automatically and manually tested to find bugs and ensure it works correctly before release.
+<br>
+
+<b>5. Release -></b> The Release phase is where the application is prepared and finalized for deployment after successful testing.
+<br>
+
+<b>6. Deploy -></b> The Deploy phase is where the application is released to production servers so users can access it.
+<br>
+
+<b>7. Operate -> </b> The Operate phase is where the application is actively running and maintained in production.
+<br>
+
+<b>Monitor -> </b> The Monitor phase involves tracking the application’s performance, health, and issues in real time.
