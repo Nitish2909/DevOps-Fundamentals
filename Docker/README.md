@@ -107,10 +107,15 @@ A Docker image is a read-only, lightweight, and executable package that contains
 <br>
 
 <b>There are three ways to use a docker image</b>
-
 <br>
 
 1. Pull the image from Docker Hub https://hub.docker.com/.
+<br>
+
+2. Create from a Dockerfile.
+<br>
+
+3. Create images from existing docker containers.
 
 # Docker image layer :
 <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1678511501028/0971b3a7-ffa8-4c75-8da5-4a1e9219228c.png" alt="">
@@ -177,8 +182,19 @@ docker compose -f fileName.yaml up down
 ```
 
 # Dockerfile 
+Dockerfile is a single file with all steps to create a docker image. Dockerfile is a special file that Docker can understand. Dockerfile helps to create images and those images can be used to create containers. We can compare it with a recipe needed to create a dish. We can share this Dockerfile with anyone and a Docker image can be created from it. Every step in a Dockerfile is an instruction corresponding to which some argument is provided. These Instructions instruct docker to perform a specific task when creating the image.
+<br>
+In Simple words we can say that A Dockerfile is a text file that contains instructions to automatically build a Docker image. It defines the environment, dependencies, and commands needed to run an application inside a container.
+<br>
 
+<b>Basic Structure of a Dockerfile :</b>
 
+```bash
+FROM node:18
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+CMD ["node", "index.js"]
 
-
-
+```
