@@ -3,7 +3,7 @@ Docker is a container platform that allows you to build, test and deploy applica
 <br>
 
 Read more about Docker
-<a href="https://www.techwithkunal.com/blog/getting-started-with-docker"></a>
+<a href="https://www.techwithkunal.com/blog/getting-started-with-docker">
 
 <b>Simple Explanation of Docker:</b>
 
