@@ -111,3 +111,29 @@ A Docker image is a read-only, lightweight, and executable package that contains
 # Read more about Containerization :
 https://sambitsinha.hashnode.dev/understanding-containerization-a-beginners-guide-to-docker
 
+# Port Binding:
+Port binding in Docker is the process of mapping a port of the host machine to a port inside a container, so that applications running inside the container can be accessed from outside.
+<br>
+
+<b>Basic Syntax</b>
+
+```bash
+docker run -p <host_port>:<container_port> <image_name>
+
+```
+<br>
+
+<b>Example:</b>
+
+```bash
+docker run -p 8080:80 nginx
+
+
+Meaning:
+
+80 -> Port inside container (where app runs)
+8080 -> Port on your system (host)
+You access app using: http://localhost:8080
+
+```
+
