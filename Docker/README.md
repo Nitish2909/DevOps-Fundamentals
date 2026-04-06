@@ -104,6 +104,13 @@ Here,
 
 # Docker Image :
 A Docker image is a read-only, lightweight, and executable package that contains everything needed to run an application, including the code, runtime, system tools, libraries, and dependencies.
+<br>
+
+<b>There are three ways to use a docker image</b>
+
+<br>
+
+1. Pull the image from  <a href="https://hub.docker.com/">Docker Hub.</a>
 
 # Docker image layer :
 <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1678511501028/0971b3a7-ffa8-4c75-8da5-4a1e9219228c.png" alt="">
@@ -164,10 +171,13 @@ services:
 
 docker compose -f fileName.yaml up -d
 
-
+//for delete
 docker compose -f fileName.yaml up down 
 
 ```
+
+# Dockerfile 
+
 
 
 
