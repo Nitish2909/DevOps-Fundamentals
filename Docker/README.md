@@ -55,30 +55,45 @@ exit
 
 1. To Pull Docker images from docker-hub :
 
-docker pull IMAGE_NAME
+      docker pull IMAGE_NAME
 
 2. To Check docker images:
 
-docker images
+       docker images
 
 3. Commands to build a container by using image:
 
-docker run IMAGE_NAME
+      docker run IMAGE_NAME        //This command always create a new container
 
 4. To run the container in interactive mode.
 Here,
 -it in Docker means running a container in interactive terminal mode (-i keeps input open and -t provides a terminal interface).
 
-docker run -it IMAGE_NAME
+    docker run -it IMAGE_NAME
 
 5. To Check how many container exist.
 
-docker ps -a
+    docker ps -a
 
 6. To Check which container is currently running.
 
-docker ps 
+    docker ps 
 
-7.
+7. Command to Start an existing container:
 
+    docker start CONTAINER_NAME OR CONTAINER_ID
+
+8. Command to Stop an currently running container:
+
+     docker stop CONTAINER_NAME OR CONTAINER_ID
+
+9. Command to delete or remove container :
+
+     docker rm CONTAINER_NAME OR CONTAINER_ID
+
+10. Command to delete or remove image :
+
+    docker rmi CONTAINER_NAME OR CONTAINER_ID
+
+```
 
