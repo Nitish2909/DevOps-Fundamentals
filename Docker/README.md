@@ -94,7 +94,7 @@ Here,
 
 9. Command to delete or remove container :
 
-     docker rm CONTAINER_NAME OR CONTAINER_ID
+     docker rm CONTAINER_ID
 
 10. Command to delete or remove image :
 
@@ -105,4 +105,9 @@ Here,
 # Docker Image :
 A Docker image is a read-only, lightweight, and executable package that contains everything needed to run an application, including the code, runtime, system tools, libraries, and dependencies.
 
+# Docker image layer :
+<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1678511501028/0971b3a7-ffa8-4c75-8da5-4a1e9219228c.png" alt="">
+
+# Read more about Containerization :
+https://sambitsinha.hashnode.dev/understanding-containerization-a-beginners-guide-to-docker
 
