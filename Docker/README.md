@@ -1,5 +1,9 @@
 # What is Docker ? Why do we need it?
 Docker is a container platform that allows you to build, test and deploy applications quickly. A developer defines all the applications and it's dependencies in a Dockerfile which is then used to build Docker images that defines a Docker container. Doing this ensures that your application will run in any environment.
+<br>
+
+Read more about Docker
+<link rel="stylesheet" href="https://www.techwithkunal.com/blog/getting-started-with-docker">
 
 <b>Simple Explanation of Docker:</b>
 
@@ -96,4 +100,8 @@ Here,
     docker rmi CONTAINER_NAME OR CONTAINER_ID
 
 ```
+
+# Docker Image :
+A Docker image is a read-only, lightweight, and executable package that contains everything needed to run an application, including the code, runtime, system tools, libraries, and dependencies.
+
 
