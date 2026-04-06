@@ -2,8 +2,9 @@
 Docker is a container platform that allows you to build, test and deploy applications quickly. A developer defines all the applications and it's dependencies in a Dockerfile which is then used to build Docker images that defines a Docker container. Doing this ensures that your application will run in any environment.
 <br>
 
-Read more about Docker
-<a href="https://www.techwithkunal.com/blog/getting-started-with-docker">
+Read more about Docker:
+https://www.techwithkunal.com/blog/getting-started-with-docker
+
 
 <b>Simple Explanation of Docker:</b>
 
