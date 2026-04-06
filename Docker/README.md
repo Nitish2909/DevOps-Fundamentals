@@ -49,4 +49,36 @@ pwd
 exit
 
 ```
+# Docker Commands:
+
+```bash
+
+1. To Pull Docker images from docker-hub :
+
+docker pull IMAGE_NAME
+
+2. To Check docker images:
+
+docker images
+
+3. Commands to build a container by using image:
+
+docker run IMAGE_NAME
+
+4. To run the container in interactive mode.
+Here,
+-it in Docker means running a container in interactive terminal mode (-i keeps input open and -t provides a terminal interface).
+
+docker run -it IMAGE_NAME
+
+5. To Check how many container exist.
+
+docker ps -a
+
+6. To Check which container is currently running.
+
+docker ps 
+
+7.
+
 
