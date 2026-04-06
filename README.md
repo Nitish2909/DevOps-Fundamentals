@@ -72,10 +72,10 @@ If bug:
 
 # DevOps Lifecycle :
 
-<img src="https://devopedia.org/images/article/54/7602.1513404277.png" alt="">
+<img src="https://devopedia.org/images/article/54/7602.1513404277.png">
 <br>
 
-<b>1.Plan -></b> The Plan phase is the first stage of the DevOps lifecycle where teams define what to build, why to build it, and how to build it.
+<b>1. Plan -></b> The Plan phase is the first stage of the DevOps lifecycle where teams define what to build, why to build it, and how to build it.
 <br> 
 It mainly focus on Understanding requirements , Setting goals and desing the work flow.
 <br>
@@ -98,7 +98,7 @@ It mainly focus on Understanding requirements , Setting goals and desing the wor
 <b>7. Operate -> </b> The Operate phase is where the application is actively running and maintained in production.
 <br>
 
-<b>8.Monitor -> </b> The Monitor phase involves tracking the application' s performance, health, and issues in real time.
+<b>8.Monitor -> </b> The Monitor phase involves tracking the application' s performance, health, and issues in real time.This is the last phase in devops lifecycle.
 
 
 
