@@ -110,7 +110,7 @@ A Docker image is a read-only, lightweight, and executable package that contains
 
 <br>
 
-1. Pull the image from  <a href="https://hub.docker.com/">Docker Hub.</a>
+1. Pull the image from Docker Hub https://hub.docker.com/.
 
 # Docker image layer :
 <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1678511501028/0971b3a7-ffa8-4c75-8da5-4a1e9219228c.png" alt="">
