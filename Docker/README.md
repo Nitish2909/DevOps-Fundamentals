@@ -198,3 +198,143 @@ COPY . .
 CMD ["node", "index.js"]
 
 ```
+# Here are the steps to how to Conatinerize a MERN using Docker Compose:
+
+<b>1. Create project structure :</b>
+
+````bash
+mern-app/
+│── client/          # React frontend
+│── server/          # Node + Express backend
+│── docker-compose.yml
+
+```
+<b>2.setUp React (Frontend)</b>
+
+```bash
+npm create vite@latest client
+
+```
+<b>3.SetUp  Backend  (Node + Express)</b>
+
+```bash
+mkdir server
+cd server
+npm init -y
+npm install express mongoose
+
+```
+<b>4.Create Dockerfile for Backend</b>
+
+```bash
+# 1. Base Image
+From node:22
+
+# 2. Set working directory
+WORKDIR /app
+
+# 3. Copy package.json and package-lock.json (copy dependencies)
+COPY package*.json ./
+
+# 4. Install dependencies
+RUN npm install
+
+#5 . Copy the rest of the application code
+COPY . .
+
+# 6. Expose the port the app runs on
+EXPOSE 3000
+
+# 7. Start the application
+CMD ["npm", "start"]
+
+```
+<b>5.Create Dockerfile for Frontend</b>
+
+```bash
+# Step 1: Base image
+FROM node:18
+
+# Step 2: Set working directory
+WORKDIR /app
+
+# Step 3: Copy dependencies
+COPY package*.json ./
+
+# Step 4: Install dependencies
+RUN npm install
+
+# Step 5: Copy project files
+COPY . .
+
+# Step 6: Expose port
+EXPOSE 3000
+
+# Step 7: Start React app
+CMD ["npm", "run", "dev"]
+
+```
+<b>6.Create docker-compose.yml</b>
+
+```bash
+version: '3'
+services:
+    backend:
+        build: ./server
+        ports:
+        - "3000:3000"
+        depends_on:
+        - mongo
+    
+    frontend:
+        build: ./client
+        ports:
+        - "8080:3000"
+    
+    mongo:
+        image: mongo
+        ports:
+        - "27017:27017"
+    
+    ``` 
+<b>7. Add .dockerignore files</b>
+
+```bash
+# For Backend
+node_modules
+npm-debug.log
+
+# For Frontend
+node_modules
+dist
+npm-debug.log
+
+```
+<b>8. Build and Run the Application</b>
+
+```bash
+# Open terminal in root folder:
+
+docker compose up --build
+
+```
+
+<b>9. Access Application</b>
+
+```bash
+# Frontend: http://localhost
+# Backend: http://localhost:5000
+
+```
+<b>10. Stop the Application</b>
+
+```bash
+docker compose down
+```
+
+<b>11.Rebuild after making changes</b>
+
+```bash
+docker compose up --build   
+
+```
