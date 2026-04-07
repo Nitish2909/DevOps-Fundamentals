@@ -100,6 +100,7 @@ Here,
 
     docker rmi CONTAINER_NAME OR CONTAINER_ID
 
+
 ```
 
 # Docker Image :
@@ -198,6 +199,8 @@ COPY . .
 CMD ["node", "index.js"]
 
 ```
+
+
 # Here are the steps to how to Conatinerize a MERN using Docker Compose:
 
 <b>1. Create project structure :</b>
@@ -338,3 +341,33 @@ docker compose down
 docker compose up --build   
 
 ```
+
+# Commands:
+
+```bash
+
+1. To Build an images from Dockerfile:
+
+    docker build -t <IMAGE_NAME>: <VERSION> .  //Version is optional
+
+2. To Bulid an images without cache:
+
+    docker build --no-cache -t <IMAGE_NAME>: <VERSION> .
+
+3. To Check docker images:  
+
+    docker images           
+
+4. To Run a container from an image:        
+    docker run -p <HOST_PORT>:<CONTAINER_PORT> <IMAGE_NAME>     
+
+5. To Check how many container exist.               
+    docker ps -a
+
+6. To Check which container is currently running.
+    docker ps
+
+7. Command to Start an existing container:
+    docker start CONTAINER_NAME OR CONTAINER_ID 
+
+8. Command to Stop an currently running container:
