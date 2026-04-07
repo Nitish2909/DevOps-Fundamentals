@@ -202,7 +202,7 @@ CMD ["node", "index.js"]
 
 <b>1. Create project structure :</b>
 
-````bash
+```bash
 mern-app/
 │── client/          # React frontend
 │── server/          # Node + Express backend
