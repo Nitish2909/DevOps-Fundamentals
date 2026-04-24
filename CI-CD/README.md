@@ -8,7 +8,7 @@ A CI/CD Pipeline is a set of automated steps that help developers build, test, a
 
 <b>CD (Continuous Delivery/Deployment)</b>: After testing, the application is automatically prepared and deployed to production or staging.
 <br>
-In Simple words we can say that CI/CD Automating the process from writing code -> testing -> deployment
+In Simple words we can say that CI/CD pipeline is an automated process where code is automatically tested and deployed after a developer pushes it, reducing manual work and increasing speed
 
 <img src="https://substackcdn.com/image/fetch/$s_!dgbK!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1f968b06-e00e-4e5e-8c8e-17150bea1054_3777x2859.png" alt="">
 
