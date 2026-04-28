@@ -171,6 +171,44 @@ Terraform (most popular, cloud-agnostic), AWS CloudFormation, Azure ARM Template
 
 ```
 
+# What is Terraform ? 
+Terraform is an open-source infrastructure as code (IaC) tool that is developed by HashiCorp. This tool is used to build, manage and automate infrastructure using code.It replaces manual cloud setup with automated, code-driven provisioning, making deployments faster and more reliable. By defining infrastructure in files, teams can easily version, reuse, and collaborate using tools like Git.
+<br>
+It supports multi-cloud environments like AWS, Azure, Google Cloud Platform.
+<br>
+
+<b>In simple words Terraform is a tool where you write code to create servers, databases, networks, etc. instead of doing it manually.</b>
+<br>
+
+<b>Why Terraform is Used :</b>
+<br>
+Instead of manually setting up resources on platforms like Amazon Web Services or Microsoft Azure, Terraform helps you:
+
+```bash
+1. Automation:
+No need to click buttons again and again
+One command can create full infrastructure
+
+2. Consistency:
+Same code -> same infrastructure every time
+Avoid human errors
+
+3. Multi-Cloud Support
+Works with AWS, Azure, Google Cloud Platform etc.
+
+4. Version Control
+Infrastructure code can be stored in Git
+Track changes easily
+
+5. Faster Deployment
+Spin up servers in minutes
+
+```
+<b>Simple Example </b>
+
+<img src="./Terraform/images/terraform_12.png" alt="">
+
+# Some Commands 
 
 
 
