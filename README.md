@@ -266,6 +266,54 @@ terraform apply  # Step 3: Execute
 
 ```
 
+# How Terraform works 
+
+```bash
+
+1. Write Configuration File
+
+You define your infrastructure in a .tf file.
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "my_server" {
+  ami           = "ami-123456"
+  instance_type = "t2.micro"
+}
+
+
+2. Initialize Project (terraform init)
+
+terraform init
+
+3. Preview Changes (terraform plan)
+
+terraform plan
+
+4. Apply Changes (terraform apply)
+
+terraform apply
+
+5. Update Infrastructure
+If you change your .tf file:
+
+terraform plan
+terraform apply
+
+6. Destroy Infrastructure (Cleanup)
+Deletes all resources created by Terraform
+
+terraform destroy
+
+
+
+
+Simple Flow :
+
+Code -> Plan -> Apply -> Manage -> Update -> Destroy
+```
 
 
 
