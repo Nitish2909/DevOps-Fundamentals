@@ -147,6 +147,31 @@ Reuse code to create multiple environments (dev, test, prod)
 
 ```
 
+<b>Real-Life Flow </b>
+
+```bash
+1. Developer writes IaC code
+
+2. Pushes to GitHub
+
+3. CI/CD pipeline runs
+
+4. Infrastructure is created/updated automatically
+```
+
+# Popular Infrastructure as Code (IaC) Tools:
+
+```bash
+1. Provisioning:
+
+Terraform (most popular, cloud-agnostic), AWS CloudFormation, Azure ARM Templates, Google Cloud Deployment Manager.
+2. Configuration Management: Ansible, Chef, Puppet.
+
+3. Server Templating: Docker, Packer, Vagrant
+
+```
+
+
 
 
 
