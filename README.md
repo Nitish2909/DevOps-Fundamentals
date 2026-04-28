@@ -101,6 +101,52 @@ It mainly focus on Understanding requirements , Setting goals and desing the wor
 <b>8.Monitor -> </b> The Monitor phase involves tracking the application' s performance, health, and issues in real time.This is the last phase in devops lifecycle.
 
 
+# Infrastructure as Code :
+Infrastructure as Code (IaC) is a software engineering practice in which IT infrastructure—such as servers, networks, databases, and configurations—is defined, provisioned, and managed using machine-readable code files, rather than through manual processes or interactive configuration tools.
+<br>
+These code files are version-controlled, reusable, and automatically executed to create and maintain infrastructure in a consistent, repeatable, and scalable way.
+<br>
+
+<b>Another definition</b>
+<br>
+Infrastructure as Code (IaC) is the management and provisioning of infrastructure (servers, networks, databases) through machine-readable definition files rather than manual configuration. It enables automation, consistency, and speed in software development by treating infrastructure as software, allowing for version control, testing, and CI/CD pipelines.
+<br>
+In simple way to Understand what acctually IaC are:
+
+```bash
+Instead of:
+
+Logging into a cloud console
+Clicking buttons to create servers
+
+You:
+
+Write code (scripts/config files)
+Run it -> infrastructure is created automatically
+
+```
+
+<b>Features of infrastructure as code :</b>
+
+```bash
+1. Automation:
+
+No manual setup -> everything runs automatically
+
+2. Consistency:
+
+Same code = same infrastructure every time (no mistakes)
+
+3. Version Control:
+
+Store infra code in Git -> track changes like software code
+
+4. Reusability
+
+Reuse code to create multiple environments (dev, test, prod)
+
+```
+
 
 
 
