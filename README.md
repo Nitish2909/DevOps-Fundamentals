@@ -206,7 +206,7 @@ Spin up servers in minutes
 ```
 <b>Simple Example </b>
 
-<img src="C:\Users\DELL\OneDrive\Documents\DevOps\Terraform\images\terraform_12.png" alt="">
+<img src="/Terraform/images/terraform_12.png" alt="">
 
 # Some Commands 
 
