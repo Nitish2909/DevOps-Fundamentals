@@ -230,7 +230,46 @@ resource "aws_instance" "myserver" {
 }
 
 ```
-# Some important Commands 
+# Some important Commands that is used in Terraform
+
+```bash
+
+1. terraform init 
+
+This command does this:--
+Initializes your Terraform project
+Downloads required plugins/providers (like AWS, Azure)
+Prepares your working directory
+
+2. terraform plan 
+
+This command does this:--
+Connects to providers (e.g., Amazon Web Services)
+Downloads required files into .terraform/ folder
+
+3. terraform apply
+
+This command does this:--
+Shows what Terraform will do before actually doing it
+
+4. terraform destroy
+
+This command does this:--
+Actually creates/updates infrastructure
+
+
+simple flow :
+
+terraform init   # Step 1: Setup
+terraform plan   # Step 2: Preview
+terraform apply  # Step 3: Execute
+
+```
+
+
+
+
+
 
 
 
