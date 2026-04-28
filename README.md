@@ -204,11 +204,33 @@ Track changes easily
 Spin up servers in minutes
 
 ```
-<b>Simple Example </b>
+<b>Simple Example in which i create a sever on AWS where the server name is MyServer</b>
 
-<img src="/Terraform/images/terraform_12.png" alt="">
+```bash
+terraform {
+    required_providers {
+        aws = {
+            source = "hashicorp/aws"   ----> Which cloud Provider you use.
+            version = "5.54.1"
+        }
+    }
+}
 
-# Some Commands 
+provider "aws" {
+    region = "eu-north-1"
+}
+
+resource "aws_instance" "myserver" {
+    ami           = "ami-0c94855ba95c71c99"  ----> Which AMI you want to use.
+    instance_type = "t2.micro"             ----> Which instance type you want to use.
+
+    tsags = {
+        Name = "MyServer"
+    }
+}
+
+```
+# Some important Commands 
 
 
 
