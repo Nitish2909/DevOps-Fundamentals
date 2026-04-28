@@ -106,6 +106,7 @@ Infrastructure as Code (IaC) is a software engineering practice in which IT infr
 <br>
 These code files are version-controlled, reusable, and automatically executed to create and maintain infrastructure in a consistent, repeatable, and scalable way.
 <br>
+<b>In Simple Words we can say that Infrastructure as Code is  Managing infrastructure using code just like software development</b>
 
 <b>Another definition</b>
 <br>
