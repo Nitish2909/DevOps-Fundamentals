@@ -317,14 +317,42 @@ Code -> Plan -> Apply -> Manage -> Update -> Destroy
 ```
 
 # Monitoring and Logging :
-Deploying an application and managing infrastructure using code is not the end ofthe DevOps journey. The most critical requirement is ensuring that the applicationremains healthy, fast, and available 24/7.
+Deploying an application and managing infrastructure using code is not the end ofthe DevOps journey. The most critical requirement is ensuring that the application remains healthy, fast, and available 24/7.
 <br>
-This responsibility is handled through Monitoring and Logging, which allow teamsto observe system behavior, detect failures early, and troubleshoot issues efficiently.
+This responsibility is handled through Monitoring and Logging, which allow teams to observe system behavior, detect failures early, and troubleshoot issues efficiently.
 <br>
 
 ***1. Monitoring***
 
 Monitoring is the process of continuously collecting, analyzing, and visualizing system metrics (numerical data) to understand the health and performance of applications, servers, and infrastructure.
+<br>
+
+<b>Examples of Metrics:</b>
+
+```bash
+CPU usage (%)
+
+Memory usage
+
+Disk I/O
+
+Network traffic
+
+API response time
+
+Number of requests per second
+
+
+
+
+Monitoring answers:
+
+Is the system running?
+How fast is it responding?
+Is anything abnormal happening?
+
+```
+
 
 
 
