@@ -316,6 +316,16 @@ Simple Flow :
 Code -> Plan -> Apply -> Manage -> Update -> Destroy
 ```
 
+# Monitoring and Logging :
+Deploying an application and managing infrastructure using code is not the end ofthe DevOps journey. The most critical requirement is ensuring that the applicationremains healthy, fast, and available 24/7.
+<br>
+This responsibility is handled through Monitoring and Logging, which allow teamsto observe system behavior, detect failures early, and troubleshoot issues efficiently.
+<br>
+
+***1. Monitoring***
+
+Monitoring is the process of continuously collecting, analyzing, and visualizing system metrics (numerical data) to understand the health and performance of applications, servers, and infrastructure.
+
 
 
 
