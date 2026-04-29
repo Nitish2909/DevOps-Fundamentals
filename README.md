@@ -376,6 +376,72 @@ Where did it fail?
 
 ```
 
+# Prometheus :
+Prometheus is an open-source monitoring and alerting system designed to collect, store, and query metrics (numerical data over time) from applications, servers, and infrastructure.
+<br>
+<b>In simple words we can say that It continuously checks your system’s health and tells you what is happening right now.</b>
+
+<br>
+
+<b>How Prometheus Works :</b>
+
+```bash
+1. Pull Model  -> Prometheus pulls data from applications using HTTP.
+
+Example :
+
+http://localhost:3000/metrics
+
+2. Exporters  -> Applications expose metrics via exporters.
+
+Common exporters:
+
+Node Exporter -> system (CPU, RAM)
+MySQL Exporter -> database
+Custom app → your own API metrics
+
+3. Time-Series Database (TSDB)
+ Prometheus stores data like:
+
+ cpu_usage{server="app1"} 75  (timestamp)
+
+
+4. PromQL (Query Language)
+Prometheus uses PromQL to query data.
+
+Example:
+rate(http_requests_total[1m])
+
+Requests per second in last 1 minute
+
+
+5. Alerting System
+You can define rules like:
+
+CPU > 80% -> trigger alert
+
+```
+
+# Grafana
+Grafana is an open-source data visualization and monitoring tool used to create interactive dashboards from multiple data sources like Prometheus, MySQL, Elasticsearch, etc.
+<br>
+In Simple words we can say that Grafana helps you to sees your system data in Graph and Dashboard.
+<br>
+
+<b>How Grafana Works :</b>
+
+```bash
+1. Data is collected by a tool (like Prometheus)
+
+2. Grafana connects to that data source
+
+3. Grafana queries the data
+
+4. Displays it in dashboards (graphs, charts)
+
+```
+
+
 
 
 
