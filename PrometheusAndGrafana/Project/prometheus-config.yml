@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 4s
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ["your_ip_address:8000"]   # Here you cannot write localhost:8000, inplace write private ip address like 190.122.0.0
