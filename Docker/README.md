@@ -379,34 +379,35 @@ docker compose up --build
 
 ```bash
 
-1. create your node  application 
+(1.) create your node  application 
 
-2. Make a file in folder name is Dockerfile. You have two folder like Frontend and Backend. Then you need to create two Dockerfile one in Frontend folder and other in Backend folder.
+
+(2.)  Make a file in folder name is Dockerfile. You have two folder like Frontend and Backend. Then you need to create two Dockerfile one in Frontend folder and other in Backend folder.
 write this code in Dockerfile for build an image of your app
 
-# 1. Base Image
-From node:22
+         # 1. Base Image
+         From node:22
 
-# 2. Set working directory
-WORKDIR /app
+         # 2. Set working directory
+         WORKDIR /app
 
-# 3. Copy package.json and package-lock.json (copy dependencies)
-COPY package*.json ./
+         # 3. Copy package.json and package-lock.json (copy dependencies)
+         COPY package*.json ./
 
-# 4. Install dependencies
-RUN npm install
+         # 4. Install dependencies
+         RUN npm install
 
-#5 . Copy the rest of the application code
-COPY . .
+         #5 . Copy the rest of the application code
+         COPY . .
 
-# 6. Expose the port the app runs on
-EXPOSE 3000
+         # 6. Expose the port the app runs on
+         EXPOSE 3000
 
-# 7. Start the application
-CMD ["npm", "start"]
+         # 7. Start the application
+         CMD ["npm", "start"]
 
 
-3. To Build an image from Dockerfile. You need to run this command:
+(3.) To Build an image from Dockerfile. You need to run this command:
 
 docker build -t <Image_Name> Dockerfile path
 
@@ -416,7 +417,7 @@ docker build -t nodeApp .
 after successfully runnig this scommand  it make an docker image of your app that name is nodeapp
 
 
-4. To make an container from this command you simply run this command:
+(4.) To make an container from this command you simply run this command:
 
 docker run -it <IMAGE_NAME>
 
@@ -429,13 +430,15 @@ docker run -it nodeapp
 
  without port mapping it can not work properly
 
- 5. If you want to check what actually run in container then you simply run this comman in another terminal and type ls you sees your file that is running in container.
+ (5.) If you want to check what actually run in container then you simply run this comman in another terminal and type ls you sees your file that is running in container.
 
  docker exec -it <CONTAINER_ID> bash 
 
 it open bash in intreacive mode now you can see your files by typing ls
 
-6. You can also set environment variable like this :
+
+
+(6.) You can also set environment variable like this :
 
 docker run -it -e PORT=3000 nodeapp 
 
