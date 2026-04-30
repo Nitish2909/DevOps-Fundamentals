@@ -175,10 +175,13 @@ services:
 
 ```bash
 
-docker compose -f fileName.yaml up -d
+docker compose up  # This command run the container according to compose written configruration
 
-//for delete
-docker compose -f fileName.yaml up down 
+
+docker compose down  # This command delete container
+
+
+docker compose up -d # this command run the conatiner in detached mode (means in background)
 
 ```
 
