@@ -446,5 +446,41 @@ now it run on port 3000
 
 ```
 
+# Steps how to upload you own app image on docker hub https://hub.docker.com/ 
+
+```bash
+
+1. create or login on https://hub.docker.com/ 
+
+2. Create a new repository on https://hub.docker.com/.
+
+3. Build an image using same username/repo like this run this command to build image:
+
+docker build -t nitish/mynodeapp .
+
+4. After running above commands it build an image.
+
+5. First login to you docker hub account by run below command in your terminal like this:
+
+docker login
+
+provide username and password 
+
+6. To push you docker image on docker hub to run this following command:
+
+docker push <repo_name>
+
+Example:
+
+docker push nitish/mynodeapp
+
+7. After runnig above commands it push image on hub.docker.com  .
+  Now anyone can run this node application without installing anything just 
+  run this command
+
+  docker run -it -p 8000:8000 <IMAGE_NAME> 
+
+```
+
 
 
