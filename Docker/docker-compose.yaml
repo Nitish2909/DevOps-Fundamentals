@@ -1,59 +1,42 @@
-version: "3.8"
+version: "3.9"  # compose file version
+
 services:
- mysql:
-  container_name: mysql 
-  image: mysql
-  environment:
-   MYSQL_DATABASE: 'MYDB'
-   MYSQL_ROOT_PASSWORD: 'ROOT'
-  
-  ports:
-   - '3306:3306'
-  
-  volumes:
-   - ./mysql-data: /var/lib/mysql
+  mongo:
+    image: mongo:6  # official MongoDB image
+    container_name: mongo_db  # custom container name
+    restart: always  # restart if container stops
+    ports:
+      - "27017:27017"  # host:container port
+    volumes:
+      - mongo_data:/data/db  # persist database data
 
-  networks:
-   - appNetwork
-  
-  restart: always
-  healthcheck:
-   test: ["CMD","mysqladmin","ping", "-h", "localhost","-uroot", "-proot"]
-   interval: 10s
-   timeout: 5s
-   retries: 5
-   start_period: 60s
-  
- App: 
-  container_name: JAVA_APP 
-  build:
-   context: .
+  backend:
+    build: ./backend  # build from backend folder
+    container_name: backend_server
+    restart: always
+    ports:
+      - "5000:5000"  # expose backend API
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mydb  # connect to mongo service
+    depends_on:
+      - mongo  # start mongo first
+    volumes:
+      - ./backend:/app  # sync code (live changes)
+    working_dir: /app  # set working directory
+    command: ["node", "server.js"]  # run backend app
 
-  environment:
-   MYSQL_HOST: mysql
-   MYSQL_USER: 'ROOT'
-   MYSQL_PASSWORD: 'ROOT'
-   MYSQL_DATABASE: 'MYDB'
-  
-   ports:
-    - '5000:5000'
+  frontend:
+    build: ./frontend  # build from frontend folder
+    container_name: frontend_client
+    restart: always
+    ports:
+      - "3000:3000"  # React app port
+    depends_on:
+      - backend  # start after backend
+    volumes:
+      - ./frontend:/app  # sync frontend code
+    working_dir: /app
+    command: ["npm", "start"]  # start React app
 
-  networks:
-   - appNetwork
-  
-  depends_on:
-   - mysql
-
-  restart: always
-  healthcheck: 
-   test: ["CMD-SHELL","curl -f http://localhost/health || exit 1"]
-   interval: 10s
-   timeout: 5s
-   retries: 5
-   start_period: 60s
-  
 volumes:
- mysql-data:
-
-networks:
- appNetwork:
+  mongo_data:  # named volume for MongoDB 
