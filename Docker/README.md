@@ -153,7 +153,7 @@ You access app using: http://localhost:8080
 # Docker Compose:
 Docker Compose is a tool used to define and manage multi-container Docker applications using a single configuration file called docker-compose.yml.
 <br>
-In Simple world Instead of running multiple docker run commands manually, you can define all services (containers) in one file and run them together.
+In Simple words we can say that Instead of running multiple docker run commands manually, you can define all services (containers) in one file and run them together.
 <br>
 
 <b>docker-compose.yml Example</b>
