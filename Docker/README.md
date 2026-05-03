@@ -240,19 +240,74 @@ Docker Compose is a tool used to define and manage multi-container Docker applic
 In Simple words we can say that Instead of running multiple docker run commands manually, you can define all services (containers) in one file and run them together.
 <br>
 
+<b>Basic Structure of docker-compose.yml</b>
+
+```bash
+version: "3.9"
+
+services:
+  service_name:
+    image: image_name OR build: path
+    container_name: name
+    ports:
+      - "host:container"
+    volumes:
+      - host_path:container_path
+    environment:
+      - KEY=VALUE
+    depends_on:
+      - other_service
+
+```
+
 <b>docker-compose.yml Example</b>
 
 ```bash
-version: '3'
+version: "3.9"  # Docker Compose file version
+
 services:
-  web:
-    image: nginx
+
+  #   MongoDB Database Service
+  mongo:
+    image: mongo:6                 # Official MongoDB image (version 6)
+    container_name: mongo_db      # Custom container name
+    restart: always               # Always restart if container stops
     ports:
-      - "8080:80"
-  app:
-    image: node
+      - "27017:27017"             # Host port : Container port
+    volumes:
+      - mongo_data:/data/db       # Persist database data
+
+  #   Backend Service (Node.js + Express)
+  backend:
+    build: ./backend              # Build image from backend folder
+    container_name: backend_server
+    restart: always
     ports:
-      - "3000:3000"
+      - "5000:5000"               # Backend runs on port 5000
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mern_db  # Connect to MongoDB using service name
+    depends_on:
+      - mongo                     # Start mongo before backend
+    volumes:
+      - ./backend:/app            # Sync local code with container
+      - /app/node_modules         # Prevent overwriting node_modules
+
+  #   Frontend Service (React)
+  frontend:
+    build: ./frontend             # Build image from frontend folder
+    container_name: frontend_client
+    restart: always
+    ports:
+      - "3000:3000"               # React app runs on port 3000
+    depends_on:
+      - backend                   # Start backend before frontend
+    volumes:
+      - ./frontend:/app           # Sync local frontend code
+      - /app/node_modules         # Avoid node_modules conflict
+
+#   Named Volume for MongoDB data
+volumes:
+  mongo_data:                     # Stores DB data persistently
 
 ```
 <b>Basic Commands:</b>
