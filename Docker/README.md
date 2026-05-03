@@ -152,6 +152,57 @@ You access app using: http://localhost:8080
 
 # Docker Networking :
 Docker networking is the system that enables communication between Docker containers, the host machine, and external networks by creating and managing isolated virtual networks. It allows containers to securely exchange data using IP addresses, port mappings, and DNS-based service discovery.
+<br>
+
+***1. Default Networking in Docker:***
+<br>
+When you install Docker, it creates a few networks automatically:
+<br>
+
+<b>1. bridge (default)</b>
+<br>
+Used when you run containers without specifying a network.
+<br>
+Containers get a private IP (e.g., 172.x.x.x).
+<br>
+Containers can talk to each other only via IP (not by name)
+<br>
+
+<b>2. host :</b>
+<br>
+Container shares the host’s network stack
+<br>
+No isolation (same IP as host)
+<br>
+Faster, but less secure
+<br>
+
+<b>3. none</b>
+<br>
+No networking at all
+
+
+***2. User-Defined Bridge Network***
+This is what you should use in real applications.Here is the command to create a network.
+
+```bash
+docker network create network_name
+
+# if you create network in bridge mode:
+
+docker network create -d bridge network_name
+
+```
+Run containers in it:
+
+```bash
+docker run -it  --network=network_name --name conatiner_name nginx
+
+docker run -d --name app1 --network my-network nginx
+
+docker run -d --name app2 --network my-network busybox
+
+```
 
 
 # Docker Compose:
