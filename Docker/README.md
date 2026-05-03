@@ -204,6 +204,35 @@ docker run -d --name app2 --network my-network busybox
 
 ```
 
+# Volume Mounting in Docker:
+Volume mounting in Docker is a mechanism that allows you to store and share data between containers and the host system (or between containers) by linking a directory inside a container to a location outside it.
+<br>
+In simple terms, it means You connect a folder inside the container to a folder on your system so data is not lost when the container stops or is deleted.
+<br>
+
+<b>Types of Volume Mounting:</b>
+<br>
+
+<b>1. Blind Mounts:  </b>
+Directly link a host directory to a container
+<br>
+Example:
+
+```bash
+docker run -v /host/path:/container/path nginx
+
+```
+
+<b>2. Docker Volumes (Managed by Docker)</b>
+Docker creates and manages storage
+<br>
+Example:
+
+```bash
+docker volume create my_volume
+docker run -v my_volume:/app/data nginx
+
+```
 
 # Docker Compose:
 Docker Compose is a tool used to define and manage multi-container Docker applications using a single configuration file called docker-compose.yml.
