@@ -150,6 +150,10 @@ You access app using: http://localhost:8080
 
 ```
 
+# Docker Networking :
+Docker networking is the system that enables communication between Docker containers, the host machine, and external networks by creating and managing isolated virtual networks. It allows containers to securely exchange data using IP addresses, port mappings, and DNS-based service discovery.
+
+
 # Docker Compose:
 Docker Compose is a tool used to define and manage multi-container Docker applications using a single configuration file called docker-compose.yml.
 <br>
